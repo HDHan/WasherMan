@@ -76,33 +76,32 @@
 								<form action="<c:url value="/Node/${node.nid}/Add/Recipient"/>"
 									method="post">
 									<input id="recipientname" name="recipientname" type="number"
-										placeholder="1112223333"> <input
-										class="button" type="submit"
-										value="Add recipient(Phone#)">
+										placeholder="1112223333"> <input class="button"
+										type="submit" value="Add recipient(Phone#)">
 								</form>
 
 								<div class="row">
-								<div class="six columns">
-									<form
-										action="<c:url value="/Node/${node.nid}/Light/Duration"/>"
-										method="post">
-										<input id="lightDuration" name="lightDuration" type="number"
-											placeholder="5" value="${lightOffDuration}"><input
-											class="button" type="submit"
-											value="Set light off duration(sec)">
-									</form>
-								</div>
-								<div class="six columns">
+									<div class="six columns">
+										<form
+											action="<c:url value="/Node/${node.nid}/Light/Duration"/>"
+											method="post">
+											<input id="lightDuration" name="lightDuration" type="number"
+												placeholder="5" value="${lightOffDuration}"><input
+												class="button" type="submit"
+												value="Set light off duration(sec)">
+										</form>
+									</div>
+									<div class="six columns">
 
-									<form
-										action="<c:url value="/Node/${node.nid}/Warning/Duration"/>"
-										method="post">
-										<input id="warningDuration" name="warningDuration"
-											type="number" placeholder="5" value="${warningDuration}">
-										<input class="button" type="submit"
-											value="Set warning duration(sec)">
-									</form>
-								</div>
+										<form
+											action="<c:url value="/Node/${node.nid}/Warning/Duration"/>"
+											method="post">
+											<input id="warningDuration" name="warningDuration"
+												type="number" placeholder="5" value="${warningDuration}">
+											<input class="button" type="submit"
+												value="Set warning duration(sec)">
+										</form>
+									</div>
 								</div>
 							</c:when>
 							<c:otherwise>
@@ -152,16 +151,7 @@
 																			alert("Invalid request.");
 																		}
 																	},
-																	error : function(
-																			data,
-																			status,
-																			er) {
-																		alert("error: "
-																				+ data
-																				+ " status: "
-																				+ status
-																				+ " er:"
-																				+ er);
+																	error : function() {
 																	}
 																});
 													} else {
@@ -178,16 +168,7 @@
 																			alert("Invalid request.");
 																		}
 																	},
-																	error : function(
-																			data,
-																			status,
-																			er) {
-																		alert("error: "
-																				+ data
-																				+ " status: "
-																				+ status
-																				+ " er:"
-																				+ er);
+																	error : function() {
 																	}
 																});
 													}
@@ -222,16 +203,7 @@
 																			alert("Invalid request.");
 																		}
 																	},
-																	error : function(
-																			data,
-																			status,
-																			er) {
-																		alert("error: "
-																				+ data
-																				+ " status: "
-																				+ status
-																				+ " er:"
-																				+ er);
+																	error : function() {
 																	}
 																});
 													} else {
@@ -248,16 +220,7 @@
 																			alert("Invalid request.");
 																		}
 																	},
-																	error : function(
-																			data,
-																			status,
-																			er) {
-																		alert("error: "
-																				+ data
-																				+ " status: "
-																				+ status
-																				+ " er:"
-																				+ er);
+																	error : function() {
 																	}
 																});
 													}
@@ -289,16 +252,7 @@
 																			alert("Invalid request.");
 																		}
 																	},
-																	error : function(
-																			data,
-																			status,
-																			er) {
-																		alert("error: "
-																				+ data
-																				+ " status: "
-																				+ status
-																				+ " er:"
-																				+ er);
+																	error : function() {
 																	}
 																});
 													} else {
@@ -315,16 +269,7 @@
 																			alert("Invalid request.");
 																		}
 																	},
-																	error : function(
-																			data,
-																			status,
-																			er) {
-																		alert("error: "
-																				+ data
-																				+ " status: "
-																				+ status
-																				+ " er:"
-																				+ er);
+																	error : function() {
 																	}
 																});
 													}
@@ -394,13 +339,13 @@
 																									.text(
 																											"The door is currently opened.");
 																							$(
-																							"#door")
-																							.addClass(
-																									"opened");
+																									"#door")
+																									.addClass(
+																											"opened");
 																							$(
-																							"#door")
-																							.addClass(
-																									"button-primary");
+																									"#door")
+																									.addClass(
+																											"button-primary");
 																						} else if (dsv == 'c') {
 																							$(
 																									"#door")
@@ -411,9 +356,9 @@
 																									.removeClass(
 																											"opened");
 																							$(
-																							"#door")
-																							.removeClass(
-																									"button-primary");
+																									"#door")
+																									.removeClass(
+																											"button-primary");
 																						}
 
 																						alr = dat.alr; //alarm
@@ -423,13 +368,13 @@
 																									.text(
 																											"The alarm is currently turned on.");
 																							$(
-																							"#alarm")
-																							.addClass(
-																									"on");
+																									"#alarm")
+																									.addClass(
+																											"on");
 																							$(
-																							"#alarm")
-																							.addClass(
-																									"button-primary");
+																									"#alarm")
+																									.addClass(
+																											"button-primary");
 																						} else if (alr == 'x') {
 																							$(
 																									"#alarm")
@@ -440,9 +385,9 @@
 																									.removeClass(
 																											"on");
 																							$(
-																							"#alarm")
-																							.removeClass(
-																									"button-primary");
+																									"#alarm")
+																									.removeClass(
+																											"button-primary");
 																						}
 
 																						occ = dat.occ; //occupied
@@ -469,9 +414,9 @@
 																									.addClass(
 																											"on");
 																							$(
-																							"#light")
-																							.addClass(
-																									"button-primary");
+																									"#light")
+																									.addClass(
+																											"button-primary");
 																						} else if (lgt == 'x') {
 																							$(
 																									"#light")
@@ -482,9 +427,9 @@
 																									.removeClass(
 																											"on");
 																							$(
-																							"#light")
-																							.removeClass(
-																									"button-primary");
+																									"#light")
+																									.removeClass(
+																											"button-primary");
 																						}
 
 																						hum = dat.hum; //humidity
@@ -503,16 +448,7 @@
 
 																						isOnUpdate = false;
 																					},
-																					error : function(
-																							data,
-																							status,
-																							er) {
-																						alert("error: "
-																								+ data
-																								+ " status: "
-																								+ status
-																								+ " er:"
-																								+ er);
+																					error : function() {
 																						isOnUpdate = false;
 																					}
 																				});
