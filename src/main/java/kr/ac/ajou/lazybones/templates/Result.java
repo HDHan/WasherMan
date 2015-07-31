@@ -1,14 +1,16 @@
 package kr.ac.ajou.lazybones.templates;
 
-import java.io.Serializable;
+import com.fasterxml.jackson.annotation.JsonInclude;
 
-/**
- * Result for requests to Personal Assistant System 
- * @author Ethan
- */
-public class Result implements Serializable {
+@JsonInclude(JsonInclude.Include.NON_NULL)
+public class Result {
+	
 	private String result;
-	private String[] errors = new String[0];
+	private String data;
+	private String reason;
+
+	public Result() {
+	}
 
 	public String getResult() {
 		return result;
@@ -18,12 +20,22 @@ public class Result implements Serializable {
 		this.result = result;
 	}
 
-	public String[] getErrors() {
-		return errors;
+	public String getData() {
+		return data;
 	}
 
-	public void setErrors(String[] errors) {
-		this.errors = errors;
+	public void setData(String data) {
+		this.data = data;
 	}
 
+	public String getReason() {
+		return reason;
+	}
+
+	public void setReason(String reason) {
+		this.reason = reason;
+	}
+	
+	
+	
 }

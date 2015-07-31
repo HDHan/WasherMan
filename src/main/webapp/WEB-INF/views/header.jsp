@@ -2,34 +2,25 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 
-<nav class="navbar">
-	<div class="container">
-		<ul class="navbar-list">
-			<li class="navbar-item"><a class="navbar-link"
-				href="<c:url value="/"/>">Home</a></li>
+<div class="container">
 
-			<%
-				//Get login status from session attribute
-				Boolean isLoggedIn = (Boolean) session.getAttribute("logininfo");
-				String userid = (String) session.getAttribute("userid");
+	<a class="button" href="<c:url value="/"/>">Home</a>
+	<a class="button" href="<c:url value="/Node/List"/>">Node List</a>
+<%
+	//Get login status from session attribute
+	Boolean isLoggedIn = (Boolean) session.getAttribute("logininfo");
+	String userid = (String) session.getAttribute("userid");
 
-				if (isLoggedIn != null) {
-			%>
-			<li class="navbar-item"><a class="navbar-link"
-				href="<c:url value="/User/Modify"/>"><%= userid %></a></li>
-			<li class="navbar-item"><a class="navbar-link"
-				href="<c:url value="/User/Logout"/>">Logout</a></li>
-			<%
-				} else {
-			%>
-			<li class="navbar-item"><a class="navbar-link"
-				href="<c:url value="/User/Login"/>">Login</a></li>
-
-			<%
-				}
-			%>
-
-		</ul>
-	</div>
-</nav>
-
+	if (isLoggedIn != null) {
+%>
+	<a class="button" >Welcome <%= userid %>.</a>
+	<a class="button" href="<c:url value="/User/Logout"/>">Logout</a>
+<%
+	} else {
+%>
+	<a class="button" href="<c:url value="/User/Login"/>">Login</a>
+<%
+	}
+%>
+	</p>
+</div>

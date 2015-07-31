@@ -8,7 +8,7 @@
   <!-- Basic Page Needs
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <meta charset="utf-8">
-  <title>Washerman</title>
+  <title>Housekeeper</title>
   <meta name="description" content="">
   <meta name="author" content="">
 
@@ -38,10 +38,9 @@
   <div class="container">
     <section class="row header">
       <div class="six column">
-        <h1>Washerman</h1>
-        <p>Welcome to washer manager.</p>
-		<a class="button button-primary" href="<c:url value="/Washer"/>">Check current running washers</a>
-		<a class="button" href="<c:url value="/Reservation"/>">Check my reservations</a>
+        <h1>Housekeeper</h1>
+        <p>^o^</p>
+		<a class="button button-primary" href="<c:url value="/Node/List"/>">Your nodes</a>
       </div>
     </section>
   </div>

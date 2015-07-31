@@ -46,6 +46,9 @@
 					Not a member yet? Please <a href="<c:url value="/User/Register/"/>">join
 						us</a>.
 				</p>
+				<p>
+					${result}
+				</p>
 				<form method="post" action="<c:url value="/User/Login/"/>">
 					<div>
 						<label class="field-label">Id</label> <input id="id" name="id"
